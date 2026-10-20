@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - DIY Sticker</title>
+    <meta name="description" content="Privacy Policy for DIY Sticker mobile application. Learn how we handle your data, permissions, and respect your privacy.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-hover: #4f46e5;
+            --primary-light: #eef2ff;
+            --accent: #ec4899;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --border-color: #e2e8f0;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            --card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-page);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Top Header */
+        header {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%);
+            color: #ffffff;
+            padding: 48px 20px 64px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .header-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .app-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(8px);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .app-icon {
+            width: 24px;
+            height: 24px;
+            background: #ffffff;
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .lang-switch {
+            display: inline-flex;
+            background: rgba(0, 0, 0, 0.25);
+            padding: 3px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: #ffffff;
+            color: #4f46e5;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        .meta-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 900px;
+            margin: -32px auto 60px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 3;
+        }
+
+        /* Highlights Card */
+        .summary-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 28px;
+        }
+
+        .summary-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .summary-item {
+            background: var(--bg-page);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 16px;
+        }
+
+        .summary-item strong {
+            display: block;
+            font-size: 14px;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .summary-item p {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Content Sections */
+        .content-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .nav-pills {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 12px;
+            margin-bottom: 28px;
+            border-bottom: 1px solid var(--border-color);
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .nav-pills a {
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-muted);
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: var(--bg-page);
+            white-space: nowrap;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        .nav-pills a:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+            background: var(--primary-light);
+        }
+
+        .section {
+            margin-bottom: 36px;
+            scroll-margin-top: 30px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary-light);
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-main);
+            margin: 18px 0 8px;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            font-size: 15px;
+        }
+
+        ul, ol {
+            color: var(--text-muted);
+            margin: 0 0 16px 24px;
+            font-size: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Callout Box */
+        .callout {
+            border-left: 4px solid var(--primary);
+            background: var(--primary-light);
+            padding: 16px 20px;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin: 16px 0;
+        }
+
+        .callout.success {
+            border-left-color: #10b981;
+            background: #ecfdf5;
+        }
+
+        .callout p {
+            color: #1e293b;
+            font-size: 14.5px;
+            margin: 0;
+        }
+
+        /* Table */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 20px 0;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        th {
+            background: #f1f5f9;
+            color: var(--text-main);
+            font-weight: 600;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-muted);
+            vertical-align: top;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Link */
+        a {
+            color: var(--primary);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        a:hover {
+            color: var(--primary-hover);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .badge-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .badge-green { background: #d1fae5; color: #065f46; }
+        .badge-blue { background: #dbeafe; color: #1e40af; }
+        .badge-amber { background: #fef3c7; color: #92400e; }
+
+        @media (max-width: 640px) {
+            .content-card {
+                padding: 24px 18px;
+            }
+            .summary-card {
+                padding: 20px 16px;
+            }
+            header {
+                padding: 36px 16px 54px;
+            }
+            .container {
+                padding: 0 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="header-top">
+                <div class="app-badge">
+                    <span class="app-icon">✨</span>
+                    <span>DIY Sticker</span>
+                    <span style="opacity: 0.6;">|</span>
+                    <span style="opacity: 0.9; font-weight: 400;">com.tuho.diysticker</span>
+                </div>
+                <div class="lang-switch" role="group" aria-label="Language selection">
+                    <button type="button" class="lang-btn active" id="btn-en" onclick="setLanguage('en')">English</button>
+                    <button type="button" class="lang-btn" id="btn-vi" onclick="setLanguage('vi')">Tiếng Việt</button>
+                </div>
+            </div>
+
+            <h1 data-lang-en="Privacy Policy" data-lang-vi="Chính Sách Quyền Riêng Tư">Privacy Policy</h1>
+            
+            <div class="meta-info">
+                <div class="meta-item">
+                    <span>📅</span>
+                    <span data-lang-en="Effective Date: October 20, 2026" data-lang-vi="Ngày có hiệu lực: 20 Tháng 10, 2026">Effective Date: October 20, 2026</span>
+                </div>
+                <div class="meta-item">
+                    <span>🛡️</span>
+                    <span data-lang-en="GDPR, CCPA & Google Play Compliant" data-lang-vi="Tuân thủ chuẩn GDPR, CCPA & Google Play">GDPR, CCPA & Google Play Compliant</span>
+                </div>
+                <div class="meta-item">
+                    <span>✉️</span>
+                    <span>beemach.dev@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Highlights Card -->
+        <section class="summary-card" aria-label="Privacy Highlights">
+            <div class="summary-title">
+                <span>⚡</span>
+                <span data-lang-en="Privacy At A Glance" data-lang-vi="Tóm Tắt Quyền Riêng Tư">Privacy At A Glance</span>
+            </div>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <strong data-lang-en="On-Device AI Processing" data-lang-vi="Xử lý AI 100% trên thiết bị">On-Device AI Processing</strong>
+                    <p data-lang-en="Background removal & subject segmentation are processed entirely on your phone via Google ML Kit. Your photos are NEVER uploaded to any cloud server." 
+                       data-lang-vi="Tính năng tách nền AI được xử lý hoàn toàn trên điện thoại qua Google ML Kit. Ảnh của bạn KHÔNG bao giờ bị tải lên máy chủ ngoài.">
+                       Background removal & subject segmentation are processed entirely on your phone via Google ML Kit. Your photos are NEVER uploaded to any cloud server.
+                    </p>
+                </div>
+                <div class="summary-item">
+                    <strong data-lang-en="Your Photos Stay Yours" data-lang-vi="Ảnh & Nhãn dán của bạn">Your Photos Stay Yours</strong>
+                    <p data-lang-en="Created stickers and imported images are stored locally in your device storage or exported directly to WhatsApp per your choice." 
+                       data-lang-vi="Nhãn dán đã tạo và ảnh nhập vào chỉ lưu trong bộ nhớ máy hoặc xuất sang WhatsApp theo yêu cầu của bạn.">
+                       Created stickers and imported images are stored locally in your device storage or exported directly to WhatsApp per your choice.
+                    </p>
+                </div>
+                <div class="summary-item">
+                    <strong data-lang-en="No Personal Data Sale" data-lang-vi="Không bán dữ liệu người dùng">No Personal Data Sale</strong>
+                    <p data-lang-en="We do not sell, rent, or trade your personal photos or identification to third parties. We strictly abide by Google Play Policies." 
+                       data-lang-vi="Chúng tôi không bán hoặc trao đổi dữ liệu cá nhân hay ảnh chụp với bất kỳ bên thứ ba nào.">
+                       We do not sell, rent, or trade your personal photos or identification to third parties. We strictly abide by Google Play Policies.
+                    </p>
+                </div>
+                <div class="summary-item">
+                    <strong data-lang-en="Full Consent & Control" data-lang-vi="Quyền kiểm soát & Đồng ý">Full Consent & Control</strong>
+                    <p data-lang-en="Users in the EU/EEA and applicable regions have complete control to configure personalized advertising preferences anytime via app Settings." 
+                       data-lang-vi="Người dùng có thể quản lý sự đồng ý về quảng cáo cá nhân hóa bất cứ lúc nào qua mục Cài đặt trong ứng dụng.">
+                       Users in the EU/EEA and applicable regions have complete control to configure personalized advertising preferences anytime via app Settings.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Document Body -->
+        <main class="content-card">
+            <!-- Navigation Quick Jump -->
+            <nav class="nav-pills" aria-label="Table of contents">
+                <a href="#section-intro" data-lang-en="1. Introduction" data-lang-vi="1. Giới thiệu">1. Introduction</a>
+                <a href="#section-data-collection" data-lang-en="2. Information We Collect" data-lang-vi="2. Dữ liệu thu thập">2. Information We Collect</a>
+                <a href="#section-permissions" data-lang-en="3. App Permissions" data-lang-vi="3. Quyền hạn ứng dụng">3. App Permissions</a>
+                <a href="#section-ai-processing" data-lang-en="4. AI Background Removal" data-lang-vi="4. Tách nền bằng AI">4. AI Background Removal</a>
+                <a href="#section-whatsapp" data-lang-en="5. WhatsApp Integration" data-lang-vi="5. Tích hợp WhatsApp">5. WhatsApp Integration</a>
+                <a href="#section-third-party" data-lang-en="6. Third-Party SDKs" data-lang-vi="6. Dịch vụ bên thứ ba">6. Third-Party SDKs</a>
+                <a href="#section-rights" data-lang-en="7. User Rights & Choices" data-lang-vi="7. Quyền của người dùng">7. User Rights & Choices</a>
+                <a href="#section-children" data-lang-en="8. Children's Privacy" data-lang-vi="8. Trẻ em">8. Children's Privacy</a>
+                <a href="#section-contact" data-lang-en="9. Contact Us" data-lang-vi="9. Liên hệ">9. Contact Us</a>
+            </nav>
+
+            <!-- 1. Introduction -->
+            <section id="section-intro" class="section">
+                <h2><span>1.</span> <span data-lang-en="Introduction" data-lang-vi="Giới thiệu">Introduction</span></h2>
+                <div data-lang-en="
+                    <p>Welcome to <strong>DIY Sticker</strong> (hereinafter referred to as 'the App', 'we', 'our', or 'us', package identifier <code>com.tuho.diysticker</code>). We value your privacy and are committed to protecting any personal data you may entrust to us.</p>
+                    <p>This Privacy Policy explains how our application collects, uses, processes, and protects your information when you download, install, and use DIY Sticker on your Android device. By using DIY Sticker, you acknowledge and agree to the practices described in this document.</p>
+                " data-lang-vi="
+                    <p>Chào mừng bạn đến với <strong>DIY Sticker</strong> (gọi tắt là 'Ứng dụng', 'chúng tôi', mã gói ứng dụng <code>com.tuho.diysticker</code>). Chúng tôi tôn trọng quyền riêng tư của bạn và cam kết bảo vệ dữ liệu cá nhân của người dùng.</p>
+                    <p>Chính sách quyền riêng tư này giải thích cách ứng dụng thu thập, xử lý và bảo vệ thông tin khi bạn tải, cài đặt và sử dụng ứng dụng DIY Sticker trên thiết bị Android. Khi sử dụng ứng dụng, bạn đồng ý với các điều khoản được trình bày trong tài liệu này.</p>
+                "></div>
+            </section>
+
+            <!-- 2. Information We Collect -->
+            <section id="section-data-collection" class="section">
+                <h2><span>2.</span> <span data-lang-en="Information We Collect and How We Use It" data-lang-vi="Thông tin chúng tôi thu thập & Mục đích sử dụng">Information We Collect and How We Use It</span></h2>
+                <div data-lang-en="
+                    <p>We believe in data minimization. DIY Sticker only accesses or collects information strictly necessary for creating custom stickers and ensuring optimal app functionality:</p>
+                    
+                    <h3>A. Photos and User Content (Local Only)</h3>
+                    <ul>
+                        <li><strong>Photos Selected for Sticker Creation:</strong> When you pick a photo from your gallery or use creative tools (brush, magic wand, eraser, lasso, text), the photo is processed solely locally on your device.</li>
+                        <li><strong>Zero Cloud Upload:</strong> Your photos, stickers, and drafts are never transferred to, inspected by, or stored on our external servers.</li>
+                    </ul>
+
+                    <h3>B. Non-Personal and Diagnostic Data (Automated)</h3>
+                    <p>To improve app stability, troubleshoot crashes, and provide advertisement services, we use third-party analytics and advertising SDKs that may automatically collect:</p>
+                    <ul>
+                        <li><strong>Device Information:</strong> Device model, operating system version, system language, unique device identifiers, and network connection status.</li>
+                        <li><strong>Performance & Crash Logs:</strong> Crash stack traces, application launch events, and performance diagnostics collected via Firebase Crashlytics.</li>
+                        <li><strong>Advertising Identifiers:</strong> Google Advertising ID (GAID / AD_ID) to measure ad impressions and prevent advertising fraud.</li>
+                    </ul>
+                " data-lang-vi="
+                    <p>Chúng tôi tuân thủ nguyên tắc giảm thiểu dữ liệu. DIY Sticker chỉ truy cập hoặc xử lý thông tin thực sự cần thiết để tạo nhãn dán và đảm bảo ứng dụng vận hành ổn định:</p>
+                    
+                    <h3>A. Hình ảnh và nội dung do người dùng tạo (Chỉ xử lý cục bộ)</h3>
+                    <ul>
+                        <li><strong>Ảnh được chọn để tạo sticker:</strong> Khi bạn chọn ảnh từ thư viện để cắt, vẽ, xóa nền, chỉnh sửa văn bản, ảnh này chỉ được nạp và chỉnh sửa trực tiếp trên bộ nhớ máy.</li>
+                        <li><strong>Không tải lên máy chủ ngoài:</strong> Ảnh gốc và nhãn dán do bạn tạo không bao giờ bị tải lên hoặc lưu trữ trên bất kỳ máy chủ đám mây nào của chúng tôi.</li>
+                    </ul>
+
+                    <h3>B. Dữ liệu kỹ thuật và chẩn đoán lỗi (Tự động)</h3>
+                    <p>Nhằm khắc phục sự cố và hiển thị quảng cáo, các bộ công cụ phát triển (SDK) bên thứ ba tích hợp trong ứng dụng có thể tự động thu thập:</p>
+                    <ul>
+                        <li><strong>Thông tin thiết bị:</strong> Mẫu máy, phiên bản hệ điều hành Android, ngôn ngữ hệ thống, trạng thái kết nối mạng.</li>
+                        <li><strong>Nhật ký sự cố & hiệu năng:</strong> Báo cáo lỗi khi ứng dụng bị dừng đột ngột (Crash reports) thông qua Firebase Crashlytics.</li>
+                        <li><strong>Mã nhận dạng quảng cáo (AD_ID):</strong> Google Advertising ID dùng để đo lường lượt xem và chống gian lận quảng cáo theo chính sách của Google.</li>
+                    </ul>
+                "></div>
+
+                <!-- Data Safety Table -->
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th data-lang-en="Data Type" data-lang-vi="Loại dữ liệu">Data Type</th>
+                                <th data-lang-en="Collection Status" data-lang-vi="Cách thu thập">Collection Status</th>
+                                <th data-lang-en="Purpose" data-lang-vi="Mục đích">Purpose</th>
+                                <th data-lang-en="Shared with Third Parties?" data-lang-vi="Chia sẻ bên thứ 3?">Shared with Third Parties?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong data-lang-en="Photos & Images" data-lang-vi="Hình ảnh & Nhãn dán">Photos & Images</strong></td>
+                                <td><span class="badge-tag badge-green" data-lang-en="Local Only" data-lang-vi="Chỉ trên máy">Local Only</span></td>
+                                <td data-lang-en="Sticker creation & editing" data-lang-vi="Tạo và chỉnh sửa nhãn dán">Sticker creation & editing</td>
+                                <td><strong data-lang-en="No (Never transmitted)" data-lang-vi="Không (Không gửi đi đâu)">No (Never transmitted)</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong data-lang-en="Crash Logs & Diagnostics" data-lang-vi="Nhật ký lỗi ứng dụng">Crash Logs & Diagnostics</strong></td>
+                                <td><span class="badge-tag badge-blue" data-lang-en="Automated (Firebase)" data-lang-vi="Tự động (Firebase)">Automated (Firebase)</span></td>
+                                <td data-lang-en="Bug fixing & stability monitoring" data-lang-vi="Sửa lỗi và nâng cao độ ổn định">Bug fixing & stability monitoring</td>
+                                <td data-lang-en="Google Firebase" data-lang-vi="Google Firebase">Google Firebase</td>
+                            </tr>
+                            <tr>
+                                <td><strong data-lang-en="Advertising ID (AD_ID)" data-lang-vi="ID Quảng cáo Google">Advertising ID (AD_ID)</strong></td>
+                                <td><span class="badge-tag badge-amber" data-lang-en="Automated (AdMob)" data-lang-vi="Tự động (AdMob)">Automated (AdMob)</span></td>
+                                <td data-lang-en="Ad delivery & frequency capping" data-lang-vi="Hiển thị và kiểm soát tần suất quảng cáo">Ad delivery & frequency capping</td>
+                                <td data-lang-en="Google AdMob" data-lang-vi="Google AdMob">Google AdMob</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. App Permissions -->
+            <section id="section-permissions" class="section">
+                <h2><span>3.</span> <span data-lang-en="App Permissions & How They Are Used" data-lang-vi="Quyền ứng dụng & Cách sử dụng">App Permissions & How They Are Used</span></h2>
+                <div data-lang-en="
+                    <p>DIY Sticker asks for minimal Android permissions required for core operations:</p>
+                    <ul>
+                        <li><code>android.permission.INTERNET</code> & <code>android.permission.ACCESS_NETWORK_STATE</code>: Required to download sticker templates, display advertisements, check network connectivity, and send crash analytics.</li>
+                        <li><code>android.permission.WRITE_EXTERNAL_STORAGE</code> (devices running Android 9 and lower): Required to save your exported stickers to the device's public photo gallery. Modern Android versions (Android 10+) use scoped storage and MediaStore without requiring broad storage permissions.</li>
+                        <li><code>com.google.android.gms.permission.AD_ID</code>: Standard Google Play Services permission for AdMob ad delivery and fraud prevention.</li>
+                    </ul>
+                " data-lang-vi="
+                    <p>DIY Sticker chỉ yêu cầu các quyền Android tối thiểu cần thiết để vận hành:</p>
+                    <ul>
+                        <li><code>android.permission.INTERNET</code> & <code>android.permission.ACCESS_NETWORK_STATE</code>: Cần thiết để tải danh mục nhãn dán mẫu, kết nối mạng cho quảng cáo và gửi báo cáo lỗi kỹ thuật.</li>
+                        <li><code>android.permission.WRITE_EXTERNAL_STORAGE</code> (chỉ trên thiết bị Android 9 trở xuống): Dùng để lưu nhãn dán vào thư viện ảnh máy. Thiết bị Android 10 trở lên sử dụng cơ chế bảo mật Scoped Storage mà không cần quyền này.</li>
+                        <li><code>com.google.android.gms.permission.AD_ID</code>: Quyền chuẩn từ Google Play Services phục vụ quảng cáo AdMob theo quy định của Google.</li>
+                    </ul>
+                "></div>
+            </section>
+
+            <!-- 4. AI Background Removal -->
+            <section id="section-ai-processing" class="section">
+                <h2><span>4.</span> <span data-lang-en="AI Background Removal & Google ML Kit" data-lang-vi="Công nghệ tách nền AI & Google ML Kit">AI Background Removal & Google ML Kit</span></h2>
+                <div class="callout success">
+                    <p data-lang-en="<strong>100% On-Device Processing:</strong> DIY Sticker leverages Google ML Kit Subject Segmentation. All machine learning inferences happen locally on your phone's processor."
+                       data-lang-vi="<strong>Xử lý 100% trên thiết bị:</strong> Ứng dụng tích hợp công cụ Google ML Kit Subject Segmentation. Quá trình nhận diện chủ thể và xóa phông nền diễn ra hoàn toàn cục bộ trên phần cứng điện thoại của bạn.">
+                       <strong>100% On-Device Processing:</strong> DIY Sticker leverages Google ML Kit Subject Segmentation. All machine learning inferences happen locally on your phone's processor.
+                    </p>
+                </div>
+                <div data-lang-en="
+                    <p>Because the AI segmentation models run locally:</p>
+                    <ul>
+                        <li>No facial recognition, biometric data, or sensitive imagery leaves your device.</li>
+                        <li>Your photos are never sent to external AI cloud APIs or used to train third-party machine learning models.</li>
+                    </ul>
+                " data-lang-vi="
+                    <p>Nhờ mô hình AI chạy trực tiếp trên máy:</p>
+                    <ul>
+                        <li>Không có dữ liệu sinh trắc học hay hình ảnh khuôn mặt nào bị truyền ra ngoài thiết bị.</li>
+                        <li>Ảnh chụp của bạn không bao giờ bị nạp vào máy chủ đám mây hay dùng để huấn luyện mô hình AI của bên thứ ba.</li>
+                    </ul>
+                "></div>
+            </section>
+
+            <!-- 5. WhatsApp Integration -->
+            <section id="section-whatsapp" class="section">
+                <h2><span>5.</span> <span data-lang-en="WhatsApp Sticker Integration" data-lang-vi="Tích hợp xuất nhãn dán sang WhatsApp">WhatsApp Sticker Integration</span></h2>
+                <div data-lang-en="
+                    <p>DIY Sticker includes a feature that enables you to package stickers and export them directly to WhatsApp Messenger via an Android <code>StickerContentProvider</code>.</p>
+                    <ul>
+                        <li>This interaction is governed by the official WhatsApp Sticker API.</li>
+                        <li>Sticker metadata (pack name, tray icon, sticker images) is made accessible strictly to the WhatsApp application installed on your device upon your explicit request ('Add to WhatsApp').</li>
+                        <li>We do not have access to your WhatsApp chat history, contacts, messages, or account credentials.</li>
+                    </ul>
+                " data-lang-vi="
+                    <p>DIY Sticker hỗ trợ đóng gói các sticker bạn vừa tạo và thêm vào ứng dụng WhatsApp Messenger thông qua cơ chế <code>StickerContentProvider</code> chuẩn của Android.</p>
+                    <ul>
+                        <li>Tính năng này tuân thủ đầy đủ API chính thức của WhatsApp.</li>
+                        <li>Gói sticker chỉ được cung cấp cho ứng dụng WhatsApp trên điện thoại của bạn khi bạn chủ động nhấn nút 'Add to WhatsApp'.</li>
+                        <li>Ứng dụng hoàn toàn KHÔNG có quyền truy cập vào danh bạ, tin nhắn, nội dung trò chuyện hay tài khoản WhatsApp của bạn.</li>
+                    </ul>
+                "></div>
+            </section>
+
+            <!-- 6. Third-Party SDKs -->
+            <section id="section-third-party" class="section">
+                <h2><span>6.</span> <span data-lang-en="Third-Party Services and SDKs" data-lang-vi="Dịch vụ và đối tác bên thứ ba">Third-Party Services and SDKs</span></h2>
+                <div data-lang-en="
+                    <p>Our app incorporates trusted third-party SDKs that may process anonymous or pseudonymous technical data. You can review their respective privacy practices below:</p>
+                    <ul>
+                        <li><strong>Google AdMob & Google Mobile Ads SDK:</strong> Used for displaying banner, interstitial, native, and app-open advertisements. <br><a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener noreferrer'>Google Ads Privacy Policy</a></li>
+                        <li><strong>Google User Messaging Platform (UMP):</strong> Used for consent management in compliance with GDPR and US State privacy laws.</li>
+                        <li><strong>Google Firebase (Analytics & Crashlytics):</strong> Used to monitor application crashes and analyze aggregated performance trends. <br><a href='https://firebase.google.com/support/privacy' target='_blank' rel='noopener noreferrer'>Firebase Privacy and Security</a></li>
+                        <li><strong>Google ML Kit:</strong> On-device vision processing library. <br><a href='https://developers.google.com/ml-kit/terms' target='_blank' rel='noopener noreferrer'>Google ML Kit Terms</a></li>
+                        <li><strong>WhatsApp:</strong> Messenger application for sticker pack import. <br><a href='https://www.whatsapp.com/legal/privacy-policy' target='_blank' rel='noopener noreferrer'>WhatsApp Privacy Policy</a></li>
+                    </ul>
+                " data-lang-vi="
+                    <p>Ứng dụng tích hợp các thư viện đối tác uy tín. Bạn có thể tham khảo chính sách bảo mật chi tiết của họ tại các đường dẫn sau:</p>
+                    <ul>
+                        <li><strong>Google AdMob:</strong> Hiển thị quảng cáo (Banner, Interstitial, Native, App Open). <br><a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener noreferrer'>Chính sách quảng cáo của Google</a></li>
+                        <li><strong>Google User Messaging Platform (UMP):</strong> Quản lý sự đồng ý quảng cáo theo quy định GDPR và luật quyền riêng tư Hoa Kỳ.</li>
+                        <li><strong>Google Firebase (Analytics & Crashlytics):</strong> Báo cáo sự cố và thống kê hiệu năng ẩn danh. <br><a href='https://firebase.google.com/support/privacy' target='_blank' rel='noopener noreferrer'>Bảo mật Firebase</a></li>
+                        <li><strong>Google ML Kit:</strong> Bộ công cụ thị giác máy tính xử lý trực tiếp trên máy. <br><a href='https://developers.google.com/ml-kit/terms' target='_blank' rel='noopener noreferrer'>Điều khoản Google ML Kit</a></li>
+                        <li><strong>WhatsApp:</strong> Ứng dụng nhắn tin tiếp nhận gói sticker. <br><a href='https://www.whatsapp.com/legal/privacy-policy' target='_blank' rel='noopener noreferrer'>Chính sách quyền riêng tư WhatsApp</a></li>
+                    </ul>
+                "></div>
+            </section>
+
+            <!-- 7. User Rights & Choices -->
+            <section id="section-rights" class="section">
+                <h2><span>7.</span> <span data-lang-en="Your Rights and Choices (GDPR & CCPA)" data-lang-vi="Quyền hạn và Lựa chọn của bạn (GDPR & CCPA)">Your Rights and Choices (GDPR & CCPA)</span></h2>
+                <div data-lang-en="
+                    <p>Depending on your jurisdiction (such as the European Economic Area, United Kingdom, or California), you are entitled to specific rights regarding your personal information:</p>
+                    <ul>
+                        <li><strong>Consent Management:</strong> Users in the EEA/UK can adjust their advertising and cookie consent choices at any time through the in-app privacy options.</li>
+                        <li><strong>Opt-Out of Personalized Ads:</strong> You can reset or disable your Google Advertising ID in your device settings under <em>Settings &gt; Google &gt; Ads &gt; Delete advertising ID</em>.</li>
+                        <li><strong>Data Deletion:</strong> All user-created stickers and cached images can be permanently erased at any time simply by clearing app data in Android Settings or uninstalling the app.</li>
+                    </ul>
+                " data-lang-vi="
+                    <p>Tùy theo quốc gia hoặc khu vực cư trú (như Liên minh Châu Âu EEA, Vương quốc Anh hoặc Bang California, Hoa Kỳ), bạn có các quyền hợp pháp sau:</p>
+                    <ul>
+                        <li><strong>Quản lý sự đồng ý:</strong> Người dùng tại EEA/UK có thể điều chỉnh hoặc rút lại sự đồng ý về dữ liệu quảng cáo bất cứ lúc nào qua biểu mẫu cài đặt quyền riêng tư trong ứng dụng.</li>
+                        <li><strong>Tắt quảng cáo cá nhân hóa:</strong> Bạn có thể đặt lại hoặc xóa mã nhận dạng quảng cáo (AD_ID) trên máy tại <em>Cài đặt &gt; Google &gt; Quảng cáo &gt; Xóa mã nhận dạng quảng cáo</em>.</li>
+                        <li><strong>Xóa toàn bộ dữ liệu:</strong> Toàn bộ nhãn dán và ảnh tạm có thể được xóa vĩnh viễn bất cứ khi nào bạn xóa dữ liệu ứng dụng trong Cài đặt Android hoặc gỡ cài đặt ứng dụng.</li>
+                    </ul>
+                "></div>
+            </section>
+
+            <!-- 8. Children's Privacy -->
+            <section id="section-children" class="section">
+                <h2><span>8.</span> <span data-lang-en="Children's Privacy (COPPA Compliance)" data-lang-vi="Quyền riêng tư của trẻ em (COPPA)">Children's Privacy (COPPA Compliance)</span></h2>
+                <div data-lang-en="
+                    <p>DIY Sticker is intended for general audiences and is not directed at children under the age of 13 (or under 16 in the European Economic Area). We do not knowingly collect personal information from children. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately so we can take appropriate corrective actions.</p>
+                " data-lang-vi="
+                    <p>DIY Sticker hướng đến người dùng phổ thông và không chủ đích nhắm tới trẻ em dưới 13 tuổi (hoặc dưới 16 tuổi tại khu vực EEA). Chúng tôi không cố ý thu thập thông tin nhận dạng cá nhân của trẻ em. Nếu bạn là phụ huynh hoặc người giám hộ và phát hiện con bạn cung cấp thông tin cá nhân, vui lòng liên hệ ngay để chúng tôi hỗ trợ xử lý kịp thời.</p>
+                "></div>
+            </section>
+
+            <!-- 9. Contact Us -->
+            <section id="section-contact" class="section">
+                <h2><span>9.</span> <span data-lang-en="Contact Us & Policy Updates" data-lang-vi="Cập nhật chính sách & Liên hệ">Contact Us & Policy Updates</span></h2>
+                <div data-lang-en="
+                    <p>We may periodically update this Privacy Policy to reflect changes in our app features or applicable legal regulations. Any updates will be published directly on this page with an updated 'Effective Date'.</p>
+                    <p>If you have questions, feedback, or data requests regarding this Privacy Policy, please contact our support team:</p>
+                    <div class='callout'>
+                        <p><strong>Application:</strong> DIY Sticker (<code>com.tuho.diysticker</code>)</p>
+                        <p><strong>Support & Privacy Email:</strong> <a href='mailto:beemach.dev@gmail.com'>beemach.dev@gmail.com</a></p>
+                    </div>
+                " data-lang-vi="
+                    <p>Chúng tôi có thể cập nhật Chính sách quyền riêng tư này theo thời gian nhằm phù hợp với các tính năng mới hoặc quy định pháp lý hiện hành. Mọi thay đổi sẽ được công bố trực tiếp trên trang này kèm ngày có hiệu lực mới.</p>
+                    <p>Nếu bạn có thắc mắc, đóng góp ý kiến hoặc cần hỗ trợ về quyền riêng tư, vui lòng liên hệ đội ngũ của chúng tôi:</p>
+                    <div class='callout'>
+                        <p><strong>Ứng dụng:</strong> DIY Sticker (<code>com.tuho.diysticker</code>)</p>
+                        <p><strong>Email hỗ trợ & Quyền riêng tư:</strong> <a href='mailto:beemach.dev@gmail.com'>beemach.dev@gmail.com</a></p>
+                    </div>
+                "></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 DIY Sticker. All rights reserved.</p>
+        <p style="margin-top: 6px; font-size: 13px;">Designed for Google Play Developer Compliance</p>
+    </footer>
+
+    <!-- Interactive Language Switcher Script -->
+    <script>
+        function setLanguage(lang) {
+            const btnEn = document.getElementById('btn-en');
+            const btnVi = document.getElementById('btn-vi');
+            
+            if (lang === 'vi') {
+                btnVi.classList.add('active');
+                btnEn.classList.remove('active');
+                document.documentElement.lang = 'vi';
+            } else {
+                btnEn.classList.add('active');
+                btnVi.classList.remove('active');
+                document.documentElement.lang = 'en';
+            }
+
+            // Update text nodes with data-lang attributes
+            document.querySelectorAll('[data-lang-en]').forEach(el => {
+                const text = el.getAttribute('data-lang-' + lang);
+                if (text) {
+                    if (el.children.length === 0 || el.getAttribute('data-lang-en').includes('<p>')) {
+                        el.innerHTML = text;
+                    } else {
+                        el.textContent = text;
+                    }
+                }
+            });
+
+            try {
+                localStorage.setItem('diy_sticker_policy_lang', lang);
+            } catch (e) {}
+        }
+
+        // Initialize language based on user browser or saved preference
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('diy_sticker_policy_lang');
+            if (savedLang === 'vi' || (!savedLang && navigator.language && navigator.language.startsWith('vi'))) {
+                setLanguage('vi');
+            } else {
+                setLanguage('en');
+            }
+        });
+    </script>
+</body>
+</html>
